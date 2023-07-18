@@ -8,6 +8,8 @@ public class Metadata {
     private String key;
     private String nullAble;
     private String comment;
+    private int poistion;
+
 
     public String getNullAble() {
         return nullAble;
@@ -29,7 +31,7 @@ public class Metadata {
     public Metadata() {
     }
 
-    public Metadata(String database, String table, String field, String type, String key, String nullAble, String comment) {
+    public Metadata(String database, String table, String field, String type, String key, String nullAble, String comment, int poistion) {
         this.database = database;
         this.table = table;
         this.field = field;
@@ -37,9 +39,16 @@ public class Metadata {
         this.key = key;
         this.nullAble = nullAble;
         this.comment = comment;
+        this.poistion = poistion;
     }
 
+    public int getPoistion() {
+        return poistion;
+    }
 
+    public void setPoistion(int poistion) {
+        this.poistion = poistion;
+    }
 
     public String getDatabase() {
         return database;
@@ -79,5 +88,19 @@ public class Metadata {
 
     public void setKey(String key) {
         this.key = key;
+    }
+
+    @Override
+    public String toString() {
+        return "Metadata{" +
+                "database='" + database + '\'' +
+                ", table='" + table + '\'' +
+                ", field='" + field + '\'' +
+                ", type='" + type + '\'' +
+                ", key='" + key + '\'' +
+                ", nullAble='" + nullAble + '\'' +
+                ", comment='" + comment + '\'' +
+                ", poistion=" + poistion +
+                '}';
     }
 }

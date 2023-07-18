@@ -17,4 +17,5 @@ target
 .DS_Store
 *.ipr
 *.iws
+*.http
 dependency-reduced-pom.xml
